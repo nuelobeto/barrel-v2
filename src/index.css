@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+  --font-ShadowsIntoLight: 'Shadows Into Light', cursive;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-ExtraBoldItalic.ttf')
+    format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'OpenSauceTwo';
+  src: url('/fonts/open-sauce/OpenSauceTwo-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-ExtraBoldItalic.ttf')
+    format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-MediumItalic.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'OpenSauceSans';
+  src: url('/fonts/open-sauce/OpenSauceSans-SemiBoldItalic.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+* {
+  font-family: 'OpenSauceTwo', sans-serif;
+  letter-spacing: -0.005em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'OpenSauceSans', sans-serif;
+}
+
+.sauce-two {
+  font-family: 'OpenSauceTwo', sans-serif;
+}
+
+.sauce-sans {
+  font-family: 'OpenSauceSans', sans-serif;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #98a2b3;
+  border-radius: 10px;
+}
+
+input[type='search'] {
+  background: transparent url('/images/search.svg') no-repeat right 10px center;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* react hot toast text style */
+.toaster [role='status'] {
+  margin: 0 8px;
+  justify-content: flex-start;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.editor {
+  font-size: 14px;
+  color: #484445;
+  line-height: 34px;
+  letter-spacing: -0.08px;
+}
+
+.editor ul {
+  list-style-type: disc;
+}
+
+.editor ol {
+  list-style-type: decimal;
+}
+
+.editor img {
+  display: block;
+  cursor: default;
+}
+
+.img-focused {
+  border: 1px solid red !important;
+}
+
+.editor a {
+  color: #4a90e2;
+  text-decoration: underline;
+  position: relative;
+}
+
+.smart-field {
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #8149fb;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+  margin: 4px;
+  background: linear-gradient(
+      0deg,
+      rgba(230, 219, 254, 0.1) 0%,
+      rgba(230, 219, 254, 0.1) 100%
+    ),
+    #fff;
+}
+
+.smart-field span {
+  color: #1a0f32;
+  font-family: 'Open Sauce Two';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.08px;
+}
+
+.editor button {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
