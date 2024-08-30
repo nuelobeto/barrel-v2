@@ -6,17 +6,17 @@ export type FileType = {
 
 export type FilterType = {
   label: string;
-  critria: string[];
-  setCriteria: React.Dispatch<React.SetStateAction<string[]>>;
-  filterOptions: string[];
+  critria: FilterOption[];
+  setCriteria: React.Dispatch<React.SetStateAction<FilterOption[]>>;
+  filterOptions: FilterOption[];
 };
 
 export type ViewType = 'list' | 'grid';
 
-export type StatusType =
+export type BadgeVariant =
   | 'active'
   | 'on leave'
-  | 'onboarding'
+  | 'pending'
   | 'resigned'
   | 'off boarding'
   | 'dismissed'

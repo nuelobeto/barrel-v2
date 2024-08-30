@@ -1,6 +1,6 @@
 import {SearchAndFilter} from '@/components/common/search-and-filter';
 import {ViewSwitch} from '@/components/common/view-switch';
-import {FilterType, ViewType} from '@/types';
+import {FilterOption, FilterType, ViewType} from '@/types';
 import {IEmployeeDocument} from '@/types/document';
 import {useState} from 'react';
 import {
@@ -139,7 +139,7 @@ const columns: ColumnDef<IEmployeeDocument>[] = [
 
 export const EmployeeDocuments = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [status, setStatus] = useState<string[]>([]);
+  const [status, setStatus] = useState<FilterOption[]>([]);
   const [view, setView] = useState<ViewType>('list');
   const table = useReactTable({
     data,
@@ -152,7 +152,11 @@ export const EmployeeDocuments = () => {
       label: 'Status',
       critria: status,
       setCriteria: setStatus,
-      filterOptions: ['draft', 'published', 'archived'],
+      filterOptions: [
+        {id: 'draft', name: 'draft'},
+        {id: 'published', name: 'published'},
+        {id: 'archived', name: 'archived'},
+      ],
     },
   ];
 

@@ -1,5 +1,4 @@
 import {BadgeVariant} from '@/components/ui/badge';
-import {StatusType} from '.';
 
 interface Pagination {
   page: string;
@@ -199,7 +198,7 @@ export interface IApp {
   version: string;
   date_installed: string;
   managed_by: string;
-  status: StatusType;
+  status: BadgeVariant;
 }
 
 export interface IPayslip {

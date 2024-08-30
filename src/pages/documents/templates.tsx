@@ -38,8 +38,14 @@ import {
 import {useNavigate} from 'react-router-dom';
 import {ROUTES} from '@/router/routes';
 import {SendTestSample} from '@/components/modules/document/send-test-sample';
+import {FilterOption} from '@/types';
 
-const statusOptions = ['Active', 'Deactivated', 'Pending'];
+const statusOptions = [
+  {id: 'active', name: 'Active'},
+  {id: 'inactive', name: 'Inactive'},
+  {id: 'on leave', name: 'On leave'},
+  {id: 'terminated', name: 'Terminated'},
+];
 
 interface Template {
   id: string;
@@ -96,7 +102,7 @@ const data: Template[] = [
 ];
 
 export const Templates = () => {
-  const [status, setStatus] = useState<string[]>([]);
+  const [status, setStatus] = useState<FilterOption[]>([]);
   const [view, setView] = useState<'list' | 'grid'>('grid');
   const navigate = useNavigate();
   const [openTestSample, setOpenTestSample] = useState(false);

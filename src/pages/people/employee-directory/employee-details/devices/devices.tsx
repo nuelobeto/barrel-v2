@@ -1,6 +1,6 @@
 import {SearchAndFilter} from '@/components/common/search-and-filter';
 import {Text} from '@/components/ui/typography';
-import {FilterType} from '@/types';
+import {FilterOption, FilterType} from '@/types';
 import {IDevice} from '@/types/device';
 import {useState} from 'react';
 import {
@@ -118,12 +118,29 @@ const devices: IDevice[] = [
 
 export const EmployeeDevices = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [jobRoles, setJobRoles] = useState<string[]>([]);
-  const jobRoleOptions = ['Software Engineer', 'Product Manager', 'Desinger'];
-  const [make, setMake] = useState<string[]>([]);
-  const makeOptions = ['MacBook', 'Hewlett-Packard', 'Dell', 'Acer'];
-  const [status, setStatus] = useState<string[]>([]);
-  const statusOptions = ['Active', 'Deactivated', 'Pending'];
+  const [jobRoles, setJobRoles] = useState<FilterOption[]>([]);
+  const jobRoleOptions = [
+    {id: 'ceo', name: 'CEO'},
+    {id: 'cto', name: 'CTO'},
+    {id: 'devops engineer', name: 'Devops Engineer'},
+    {id: 'product designer', name: 'Product Designer'},
+    {id: 'product designer', name: 'Product Designer'},
+    {id: 'product manager', name: 'Product Manager'},
+    {id: 'software engineer', name: 'Software Engineer'},
+  ];
+  const [make, setMake] = useState<FilterOption[]>([]);
+  const makeOptions = [
+    {id: 'macBook', name: 'MacBook'},
+    {id: 'hewlett-packard', name: 'Hewlett-Packard'},
+    {id: 'dell', name: 'Dell'},
+    {id: 'acer', name: 'Acer'},
+  ];
+  const [status, setStatus] = useState<FilterOption[]>([]);
+  const statusOptions = [
+    {id: 'active', name: 'Active'},
+    {id: 'deactivated', name: 'Deactivated'},
+    {id: 'pending', name: 'Pending'},
+  ];
   const filters: FilterType[] = [
     {
       label: 'Job role',

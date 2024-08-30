@@ -8,7 +8,11 @@ import NewMemberTriggerAction from '@/components/modules/employee/new-member-dia
 import {Button} from '@/components/ui/button';
 import {DocumentFilledIcon, PersonIcon} from '@/components/ui/icons';
 import {Text} from '@/components/ui/typography';
-import {useFetchBusiness, useFetchMembers} from '@/hooks/useQueries';
+import {
+  useFetchBusiness,
+  useFetchJobTitles,
+  useFetchMembers,
+} from '@/hooks/useQueries';
 import {cn} from '@/lib/utils';
 import {ROUTES} from '@/router/routes';
 import {useState} from 'react';
@@ -17,7 +21,10 @@ import {NavLink, Outlet} from 'react-router-dom';
 export default function DataManager() {
   const [showBanner, setShowBanner] = useState(true);
   const {data: business} = useFetchBusiness();
-  const {data: members} = useFetchMembers(business?.data?.id);
+  const {data: members} = useFetchMembers({
+    businessId: business?.data?.id as string,
+  });
+  const {data: jobTitlesRes} = useFetchJobTitles();
 
   return (
     <DashboardLayout>
@@ -56,9 +63,12 @@ export default function DataManager() {
             </Text>
 
             {/* hack to activate the buttons only when there are members to prevent the page from breaking */}
-            {members ? (
+            {members && jobTitlesRes ? (
               <div className="mt-6 flex items-center gap-4">
-                <NewMemberTriggerAction members={members}>
+                <NewMemberTriggerAction
+                  members={members}
+                  jobTitlesRes={jobTitlesRes}
+                >
                   <Button>
                     <PersonIcon className="fill-white" />
                     Add Employee

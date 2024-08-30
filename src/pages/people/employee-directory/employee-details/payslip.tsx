@@ -1,5 +1,5 @@
 import {SearchAndFilter} from '@/components/common/search-and-filter';
-import {FilterType, ViewType} from '@/types';
+import {FilterOption, FilterType, ViewType} from '@/types';
 import {useState} from 'react';
 import {
   ColumnDef,
@@ -87,8 +87,13 @@ const payslipData: IPayslip[] = [
 export const EmployeePayslip = () => {
   const [view, setView] = useState<ViewType>('list');
   const [searchQuery, setSearchQuery] = useState('');
-  const [status, setStatus] = useState<string[]>([]);
-  const statusOptions = ['Active', 'Deactivated', 'Pending'];
+  const [status, setStatus] = useState<FilterOption[]>([]);
+  const statusOptions = [
+    {id: 'active', name: 'Active'},
+    {id: 'inactive', name: 'Inactive'},
+    {id: 'on leave', name: 'On leave'},
+    {id: 'terminated', name: 'Terminated'},
+  ];
   const filters: FilterType[] = [
     {
       label: 'Status',

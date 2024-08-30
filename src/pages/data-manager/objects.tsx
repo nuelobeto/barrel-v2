@@ -1,6 +1,6 @@
 import {SearchAndFilter} from '@/components/common/search-and-filter';
 import {Text} from '@/components/ui/typography';
-import {FilterType} from '@/types';
+import {FilterOption, FilterType} from '@/types';
 import {useState} from 'react';
 import {
   ColumnDef,
@@ -103,12 +103,12 @@ const objectData: IObject[] = [
 
 export const DataManagerObjects = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [category, setCategory] = useState<string[]>([]);
+  const [category, setCategory] = useState<FilterOption[]>([]);
   const categoryOptions = [
-    'Personal details',
-    'Compensation details',
-    'Work details',
-    'document details',
+    {id: 'Personal details', name: 'Personal details'},
+    {id: 'Compensation details', name: 'Compensation details'},
+    {id: 'Work details', name: 'Work details'},
+    {id: 'document details', name: 'document details'},
   ];
   const filters: FilterType[] = [
     {

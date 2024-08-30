@@ -6,7 +6,7 @@ import {
 } from '@/components/layouts/dashboard-layout';
 import {SearchAndFilter} from '@/components/common/search-and-filter';
 import {Text} from '@/components/ui/typography';
-import {FilterType} from '@/types';
+import {FilterOption, FilterType} from '@/types';
 import {useState} from 'react';
 import {
   ColumnDef,
@@ -120,13 +120,13 @@ export default function DataObject() {
   const [success, setSuccess] = useState(false);
   const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [category, setCategory] = useState<string[]>([]);
+  const [category, setCategory] = useState<FilterOption[]>([]);
   const [payload, setPayload] = useState<any | null>(null);
   const categoryOptions = [
-    'Personal details',
-    'Compensation details',
-    'Work details',
-    'document details',
+    {id: 'Personal details', name: 'Personal details'},
+    {id: 'Compensation details', name: 'Compensation details'},
+    {id: 'Work details', name: 'Work details'},
+    {id: 'document details', name: 'document details'},
   ];
   const filters: FilterType[] = [
     {
